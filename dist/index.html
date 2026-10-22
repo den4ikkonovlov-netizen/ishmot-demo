@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+// Mobile in-app browsers may restore the last catalog scroll position on reload.
+if (matchMedia('(max-width: 900px)').matches) {
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  const fromFavorites = /\/favorites\.html$/.test(document.referrer.split(/[?#]/)[0]);
+  const isReload = performance.getEntriesByType('navigation')[0]?.type === 'reload';
+  const startAtHero = !location.hash || isReload || !fromFavorites;
+  if (location.hash && startAtHero) history.replaceState(history.state, '', location.pathname + location.search);
+  if (startAtHero) addEventListener('pageshow', () => requestAnimationFrame(() => scrollTo(0, 0)));
+}
+</script>
+<meta name="description" content="айшмот в Северодвинске: iPhone, компьютеры, аксессуары и ремонт техники. Выбирайте по настоящим фотографиям, смотрите цены и приезжайте на Ломоносова, 85к2.">
+<meta name="theme-color" content="#101c43"><meta name="robots" content="noindex,nofollow">
+<title>айшмот — магазин техники и сервис</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="preload" href="assets/onest-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/iphone17promax.glb" as="fetch" crossorigin>
+<link rel="stylesheet" href="vendor/framework7-buttons.css"><link rel="stylesheet" href="style.css?v=14"><link rel="stylesheet" href="hero.css?v=14"><link rel="stylesheet" href="liquid.css?v=14"><script defer src="data.js"></script><script defer src="app.js?v=28"></script><script defer src="liquid.js?v=21"></script>
+<link rel="stylesheet" href="phone-scene.css?v=14"><link rel="stylesheet" href="hero-color.css?v=26"><link rel="stylesheet" href="site-color.css?v=25"><link rel="stylesheet" href="site-motion.css?v=25"><link rel="stylesheet" href="mobile-fixes.css?v=4"><link rel="stylesheet" href="interaction-fixes.css?v=1"><script defer src="phone-scene.js?v=30" onerror="document.querySelector('.phone-stage')?.classList.remove('scene-pending')"></script><script defer src="hero-fluid.js?v=2"></script><script defer src="site-motion.js?v=22"></script>
+<noscript><style>.phone-stage.scene-pending .phone-poster{opacity:1}</style></noscript>
+</head>
+<body class="ios-ui site-opening">
+<a class="skip" href="#catalog">Перейти к каталогу</a>
+<div class="site-entry" aria-hidden="true"><span class="site-entry-mark">айшмот</span><span class="site-entry-line"></span></div>
+<div class="topline"><span>МАГАЗИН ТЕХНИКИ И СЕРВИС</span><a href="#visit">Северодвинск · Ломоносова, 85к2 </a><span class="hours"><i></i> Ежедневно 12:00–21:00</span></div>
+<header class="header">
+ <a class="brand" href="#" aria-label="айшмот — на главную">айшмот</a>
+ <nav class="nav-island" aria-label="Основная навигация"><a class="f7-button" href="#catalog"><img class="ui-icon" src="assets/icons/grid-outline.svg" alt="" aria-hidden="true"><span>Техника</span></a><a class="f7-button" href="#service"><img class="ui-icon" src="assets/icons/construct-outline.svg" alt="" aria-hidden="true"><span>Ремонт</span></a><a class="f7-button" href="#trade"><img class="ui-icon" src="assets/icons/swap-horizontal-outline.svg" alt="" aria-hidden="true"><span>Trade-in</span></a><a class="f7-button nav-favorites" href="favorites.html"><span class="nav-heart" aria-hidden="true">♡</span><span>Избранное</span><b class="nav-saved-count" aria-label="0 сохранённых товаров">0</b></a><a class="f7-button" href="#visit"><img class="ui-icon" src="assets/icons/location.svg" alt="" aria-hidden="true"><span>Мы рядом</span></a></nav>
+ <div class="header-actions"><a class="header-phone" href="tel:+79950136959"><span class="call-orb"><img class="ui-icon" src="assets/icons/call.svg" alt="" aria-hidden="true"></span><span>+7 (995) 013-69-59</span></a><a class="header-contact" href="https://vk.me/i_shmot" target="_blank" rel="noopener" aria-label="Написать в ВК"><img class="ui-icon" src="assets/icons/chatbubble-ellipses.svg" alt="" aria-hidden="true"></a></div>
+ <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+</header>
+<main>
+<section class="hero hero-cinema" aria-labelledby="hero-title">
+ <svg class="hero-color-field" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <defs>
+   <linearGradient id="hero-night-gradient" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#385ba1"/><stop offset=".28" stop-color="#233e7c"/><stop offset="1" stop-color="#101e49"/></linearGradient>
+   <linearGradient id="hero-night-mobile" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#24458d"/><stop offset=".35" stop-color="#182e65"/><stop offset="1" stop-color="#101e49"/></linearGradient>
+  </defs>
+  <path class="hero-color-field-desktop" d="M535 -100 C580 110 463 255 490 460 C523 640 464 793 525 1100 L1100 1100 L1100 -100 Z" fill="url(#hero-night-gradient)"/>
+  <path class="hero-color-field-mobile" d="M-100 427 C218 392 466 449 708 427 C868 412 1000 409 1100 426 L1100 1100 L-100 1100 Z" fill="url(#hero-night-mobile)"/>
+ </svg>
+ <div class="hero-wordmark" aria-hidden="true">айшмот</div>
+ <div class="hero-grain" aria-hidden="true"></div>
+ <div class="hero-caption"><span>МАГАЗИН ТЕХНИКИ И СЕРВИС</span><span>СЕВЕРОДВИНСК</span></div>
+ <div class="hero-story"><p class="hero-kicker">Магазин · Сервис · Trade-in</p><h1 id="hero-title"><span>Твой лучший</span><span><em>выбор.</em></span></h1><p class="hero-description">iPhone, компьютеры, аксессуары.<br>Всё можно посмотреть. Всё можно попробовать.</p><div class="hero-actions"><a class="button black f7-button" href="#catalog"><img class="ui-icon" src="assets/icons/grid-outline.svg" alt="" aria-hidden="true">Выбрать технику</a><a class="hero-service" href="#service">Починить свою</a></div></div>
+ <div class="hero-showcase">
+  <div class="phone-aura" aria-hidden="true"></div><figure class="hero-art phone-stage scene-pending" aria-label="Демонстрационная 3D-сцена с iPhone 17 Pro Max">
+   <img class="hero-device phone-poster" src="assets/phone-poster.svg?v=27" alt="iPhone с шуточным сообщением от Тима Кука: Заходи в айшмот" width="620" height="730" fetchpriority="high">
+  </figure>
+  <a href="#visit" class="ios-widget clock-widget" aria-label="Часы работы и адрес магазина"><span class="widget-eyebrow">Северодвинск</span><time id="local-clock">12:00</time><span class="widget-status"><i></i><span id="shop-status">Ежедневно 12–21</span></span></a>
+
+ </div>
+ <div class="hero-baseline"><a href="#visit"><span class="open-indicator"></span><span class="hero-address">Ломоносова, 85к2</span><span class="hero-hours">Ежедневно 12–21</span><span class="mobile-shop-status" id="shop-status-mobile">Открыто до 21:00</span></a><a href="#catalog" class="scroll-hint"><span></span>Дальше — ваше</a></div>
+</section>
+<div class="shop-intro"><p>Большие планы начинаются<br>с <em>правильной техники.</em></p><div><span>Новая привычка. Рабочий инструмент.<br>Подарок себе. Выбирайте, что ближе.</span><a href="#catalog">Весь каталог · 81 товар</a></div></div>
+
+<section class="catalog section" id="catalog">
+ <div class="section-meta mono"><span>КАТАЛОГ</span><span>ВСЁ МОЖНО ПОСМОТРЕТЬ В МАГАЗИНЕ</span></div>
+ <div class="section-heading"><h2>Хорошая техника.<br><em>В хороших руках.</em></h2><p>Выбирайте по настоящим фотографиям.<br>Состояние и условия — в каждой карточке.</p></div>
+ <div class="catalog-controls">
+  <div class="category-tabs" role="group" aria-label="Категория товаров"><button data-category="Все" class="active" aria-pressed="true">Всё <sup>81</sup></button><button data-category="iPhone" aria-pressed="false">iPhone</button><button data-category="Android" aria-pressed="false">Android</button><button data-category="Компьютеры" aria-pressed="false">Компьютеры</button><button data-category="Аксессуары" aria-pressed="false">Аксессуары</button></div>
+  <div class="filter-row"><label class="search"><img class="ui-icon" src="assets/icons/search-outline.svg" alt="" aria-hidden="true"><input id="search" type="search" placeholder="Модель, память или аксессуар" aria-label="Поиск по каталогу"></label><label class="sort"><span class="sr-only">Сортировка</span><select id="sort"><option value="default">Порядок магазина</option><option value="price-asc">Сначала дешевле</option><option value="price-desc">Сначала дороже</option><option value="name">По названию</option></select></label><a class="saved-filter" id="saved-filter" href="favorites.html">♡ <span>Избранное</span><b id="saved-count">0</b></a></div>
+ </div>
+ <div class="catalog-status mono"><span id="result-count" aria-live="polite"></span></div>
+ <div class="product-grid" id="product-grid"></div>
+ <div class="empty-state" id="empty-state" hidden><span>⌕</span><h3>Пока ничего не нашлось</h3><p>Попробуйте другое название или сбросьте фильтры.</p><button class="button black" id="reset-filters">Показать всё </button></div>
+  <div class="catalog-bottom"><p>Ассортимент меняется. Наличие и итоговую стоимость<br>подтвердит консультант перед покупкой.</p><button class="button outline" id="show-more">Ещё техника</button><span class="mono" id="page-count"></span></div>
+</section>
+
+<section class="trade section" id="trade">
+ <div class="section-meta mono"><span>TRADE-IN</span><span>ПЕРЕХОД НА СЛЕДУЮЩИЙ УРОВЕНЬ</span></div>
+ <div class="trade-layout"><div class="trade-copy"><h2>Пора<br><em>обновиться.</em></h2><p>Принесите своё устройство — оценим его и зачтём стоимость при обмене на новое. Меньше доплата. Больше поводов для апгрейда.</p><a class="button black f7-button" href="https://vk.me/i_shmot" target="_blank" rel="noopener"><img class="ui-icon" src="assets/icons/swap-horizontal-outline.svg" alt="" aria-hidden="true">Обсудить обмен</a></div>
+ <div class="trade-visual"><div class="trade-photo old"><img src="assets/product-26-1.jpg" alt="iPhone 12 из каталога айшмот" loading="lazy"><small>ВАШ НЫНЕШНИЙ</small></div><div class="swap-symbol" aria-hidden="true">+</div><div class="trade-photo new"><img src="assets/product-8-1.jpg" alt="iPhone 16 Pro из каталога айшмот" loading="lazy"><small>ВАШ СЛЕДУЮЩИЙ</small></div><span class="trade-caption mono">ОБМЕН С ДОПЛАТОЙ</span></div></div>
+ <div class="trade-steps"><div><b>01</b><p>Покажите устройство<span>Модель, память и состояние</span></p></div><div><b>02</b><p>Получите оценку<span>После проверки в магазине</span></p></div><div><b>03</b><p>Выберите следующее<span>С зачётом стоимости старого</span></p></div></div>
+</section>
+
+<section class="service section" id="service">
+ <div class="section-meta mono"><span>МАСТЕРСКАЯ</span><span><i class="signal"></i> ВЕРНЁМ В СТРОЙ</span></div>
+ <div class="service-layout"><div class="service-intro"><h2>Ещё<br><em>послужит.</em></h2><p>Разберёмся с техникой. Ремонтируем Apple и Android, обслуживаем компьютеры и игровые консоли.</p><div class="service-photo"><img src="assets/shop-3.jpg" loading="lazy" alt="Рабочее место мастера айшмот и разобранный iPhone"><span class="mono">МАСТЕРСКАЯ / АЙШМОТ</span></div><a class="text-link service-message f7-button" href="https://vk.me/i_shmot" target="_blank" rel="noopener"><img class="ui-icon" src="assets/icons/chatbubble-ellipses.svg" alt="" aria-hidden="true">Обсудить ремонт</a></div>
+ <div class="service-catalog"><div class="service-tools"><label><span class="sr-only">Поиск услуги</span><input id="service-search" type="search" placeholder="Что нужно починить?"></label><span class="service-source-label">Прайс сайта · 11</span></div><div id="service-list"></div><div class="service-pagination" aria-label="Страницы услуг"><button id="service-prev" aria-label="Предыдущая страница услуг">Назад</button><span id="service-page" aria-live="polite"></span><button id="service-next" aria-label="Следующая страница услуг">Далее</button></div><p class="service-note">В карточках — подробные цены и условия из прайса магазина. Стоимость зависит от модели и результата диагностики. Гарантия на услуги — от 1 до 12 месяцев.</p></div></div>
+</section>
+
+<section class="about section" id="about">
+ <div class="section-meta mono"><span>НАШ МАГАЗИН</span><span>ТЕХНИКУ МОЖНО ПОСМОТРЕТЬ</span></div>
+ <div class="section-heading"><h2>Выбирайте<br><em>вживую.</em></h2><p>Магазин на Ломоносова, 85к2.<br>Посмотрите устройства и сравните<br>варианты перед покупкой.</p></div>
+ <div class="photo-editorial"><figure class="wide"><img src="assets/shop-18.jpg" alt="Витрины с телефонами и аксессуарами в магазине айшмот" loading="lazy"><figcaption><span>01 / ВИТРИНА МАГАЗИНА</span></figcaption></figure><figure class="portrait"><img src="assets/shop-19.jpg" alt="Покупательница айшмот с новым iPhone" loading="lazy"><figcaption><span>02 / ПОКУПКА В АЙШМОТ</span></figcaption></figure><div class="about-note"><h3>Поможем<br>с выбором.</h3><p>Объясним разницу между моделями<br>и ответим на вопросы.</p><a href="https://vk.ru/i_shmot" target="_blank" rel="noopener">Фото и новости в ВК </a></div></div>
+ <div class="ways"><article><span class="mono">[ ОБМЕН ]</span><h3>Trade-in</h3><p>Старое устройство — часть оплаты за следующее.</p></article><article><span class="mono">[ ОПЛАТА ]</span><h3>Можно частями</h3><p>В магазине доступна рассрочка. Условия и решение — после заявки в банк.</p><button data-service-id="service-11">Подробнее </button></article><article><span class="mono">[ СЕРВИС ]</span><h3>Есть к кому прийти</h3><p>Помощь с аксессуарами, настройкой и ремонтом в одном месте.</p></article></div>
+</section>
+
+<section class="visit section" id="visit">
+ <div class="section-meta mono"><span>ЗАХОДИТЕ В ГОСТИ</span><span>СЕВЕРОДВИНСК, РОССИЯ</span></div>
+ <div class="visit-layout"><div><h2>Ближе,<br>чем <em>кажется.</em></h2><address>Ломоносова, 85к2</address><p>Левое крыльцо, дверь рядом с «Бристолем».<br>Каждый день с 12:00 до 21:00.</p><a class="phone contact-call" href="tel:+79950136959"><span class="call-orb"><img class="ui-icon" src="assets/icons/call.svg" alt="" aria-hidden="true"></span>+7 (995) 013-69-59</a><div class="contact-buttons"><a class="button black f7-button" href="https://vk.me/i_shmot" target="_blank" rel="noopener"><img class="ui-icon" src="assets/icons/chatbubble-ellipses.svg" alt="" aria-hidden="true">Написать в ВК</a><a class="button outline" href="https://telegram.me/ishmot_ru" target="_blank" rel="noopener">Telegram </a></div></div><div class="visit-card"><img src="assets/shop-7.jpg" alt="Фасад здания магазина айшмот на Ломоносова, 85к2" loading="lazy"><a class="route-link" href="https://yandex.ru/maps/org/239829629425" target="_blank" rel="noopener"><span><small>ПОСТРОИТЬ МАРШРУТ</small>Забегайте в айшмот</span></a></div></div>
+ <div class="map-shell" id="map-shell"><iframe title="Карта проезда к магазину айшмот — Ломоносова, 85к2" src="https://www.openstreetmap.org/export/embed.html?bbox=39.7755%2C64.5477%2C39.7847%2C64.5518&amp;layer=mapnik&amp;marker=64.549773%2C39.780102" loading="lazy" allowfullscreen></iframe></div><a class="map-external" href="https://yandex.ru/maps/org/239829629425" target="_blank" rel="noopener">Открыть точку магазина в Яндекс Картах</a>
+</section>
+</main>
+<footer><div class="footer-top"><a class="brand" href="#">айшмот</a><span>Техника и ремонт.<br>В одном месте.</span><a class="back-top" href="#">НАВЕРХ </a></div><div class="footer-bottom mono"><span>© АЙШМОТ · СЕВЕРОДВИНСК</span><a href="https://vk.ru/i_shmot" target="_blank" rel="noopener">ВК </a></div><div class="demo-badge"><i></i> Концепт сайта для айшмот · Демо</div></footer>
+<dialog id="product-dialog" aria-labelledby="modal-title"><button class="modal-close" aria-label="Закрыть карточку">×</button><div class="modal-layout"><div class="modal-gallery"><div class="modal-photo"><img id="modal-image" alt=""><button id="photo-prev" aria-label="Предыдущая фотография">←</button><button id="photo-next" aria-label="Следующая фотография">→</button><span class="mono" id="photo-count"></span></div><div class="modal-thumbs" id="modal-thumbs"></div></div><div class="modal-info"><span class="eyebrow" id="modal-category"></span><h2 id="modal-title"></h2><div class="modal-price"><strong id="modal-price"></strong><del id="modal-old-price"></del></div><p class="modal-availability" id="modal-availability"></p><div class="modal-actions"><a class="button orange" id="modal-vk" target="_blank" rel="noopener">Карточка магазина</a><button class="modal-save" id="modal-save" aria-label="В избранное">♡</button></div><div class="description" id="modal-description"></div></div></div></dialog>
+<div class="toast" role="status" aria-live="polite"></div>
+</body></html>

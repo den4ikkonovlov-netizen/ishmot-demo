@@ -1,0 +1,17 @@
+IPhone 17 Pro Max — Fiq KM
+Source: https://www.blendkit.com/asset-gallery-detail/f55a6114-dc21-4bde-8401-b689ede28d35/
+Asset version: 48cb62b5-ed44-4102-8101-8f088fc7785a
+Retrieved: 2026-10-21
+License: BlenderKit / Blendkit Royalty Free
+https://www.blendkit.com/docs/licenses/
+
+The geometry is used as an integrated component of this website, not distributed
+as a standalone stock model. Blendkit permits commercial higher-level derivative
+works, but does not permit resale of the model as a model or part of an asset pack.
+The model remains the work of Fiq KM. Do not extract and resell it as a 3D asset.
+
+Website adaptations: decompressed geometry, portrait orientation, studio materials,
+replacement animated screen, animation timeline and lighting. The screen and the
+Tim Cook message are an illustrative fictional demo, not real device messages or
+an endorsement by Apple or Tim Cook. Avatar source: user-provided meme already
+included in this demo website.

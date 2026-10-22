@@ -1,0 +1,37 @@
+/* Framework7 9.2.0, MIT. Selected button rules; selectors namespaced. */
+.f7-button{
+  --f7-touch-ripple-color: rgba(var(--f7-theme-color-rgb), 0.25);
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  appearance: none;
+  background: none;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  overflow: hidden;
+  font-family: inherit;
+  cursor: pointer;
+  outline: 0;
+  box-sizing: border-box;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  border: var(--f7-button-border-width, 0px) solid var(--f7-button-border-color, var(--f7-theme-color));
+  font-size: var(--f7-button-font-size);
+  color: var(--f7-button-text-color, var(--f7-theme-color));
+  height: var(--f7-button-height);
+  line-height: calc(var(--f7-button-height) - var(--f7-button-border-width, 0) * 2);
+  padding: var(--f7-button-padding-vertical, 0px) var(--f7-button-padding-horizontal);
+  border-radius: var(--f7-button-border-radius);
+  min-width: var(--f7-button-min-width);
+  font-weight: var(--f7-button-font-weight);
+  letter-spacing: var(--f7-button-letter-spacing);
+  text-transform: var(--f7-button-text-transform);
+  background-color: var(--f7-button-bg-color);
+  box-shadow: var(--f7-button-box-shadow);
+}
+.ios-ui .f7-button{
+  transition-duration: 100ms;
+}

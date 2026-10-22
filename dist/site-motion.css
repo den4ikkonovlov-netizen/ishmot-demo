@@ -1,0 +1,44 @@
+/* A brief opening sequence and restrained scroll reveals. Content stays visible without JS. */
+.site-entry{display:none}
+@media(prefers-reduced-motion:no-preference){
+ .site-opening .site-entry{display:block;position:fixed;inset:0;z-index:10000;overflow:hidden;animation:hero-entry-end 2.1s both,site-backdrop-clear 1.4s .42s both}
+ .site-entry:before,.site-entry:after{content:"";position:absolute;top:-4%;height:108%;width:56%;box-shadow:0 0 65px #081c5655}
+ .site-entry:before{left:-2%;background:#f5f3ed;border-radius:0 42% 42% 0 / 0 80% 80% 0;animation:hero-curtain-left 1.52s .42s cubic-bezier(.76,0,.18,1) both}
+ .site-entry:after{right:-2%;background:linear-gradient(125deg,#274585,#101e49 72%);border-radius:42% 0 0 42% / 80% 0 0 80%;animation:hero-curtain-right 1.52s .42s cubic-bezier(.76,0,.18,1) both}
+ .site-entry-mark{position:absolute;z-index:2;top:50%;left:50%;font-size:clamp(86px,13vw,225px);font-weight:850;letter-spacing:-.09em;line-height:1;white-space:nowrap;color:#fff;mix-blend-mode:difference;animation:hero-mark 1.48s .08s both}
+ .site-entry-line{position:absolute;z-index:3;top:18%;bottom:18%;left:50%;width:2px;background:linear-gradient(transparent,#fff,#fff,transparent);box-shadow:0 0 24px #fff,0 0 60px #9fc5ff;animation:hero-seam 1.25s .25s both}
+ .site-opening .topline,.site-opening .header{animation:site-header-open .8s 1.68s cubic-bezier(.18,1,.3,1) both}
+ .hero.intro-playing .hero-color-field{animation:hero-color-open 1.7s .35s cubic-bezier(.22,1,.36,1) both}
+ .hero.intro-playing .hero-showcase{animation:hero-showcase-open 1.25s .85s cubic-bezier(.18,1,.3,1) both}
+ .hero.intro-playing .hero-wordmark{animation-delay:1.05s}
+ .hero.intro-playing .hero-caption{animation-delay:1.08s}
+ .hero.intro-playing .hero-story h1>span{animation:hero-copy-open .95s 1.25s cubic-bezier(.18,1,.3,1) both}
+ .hero.intro-playing .hero-story h1>span:nth-child(2){animation-delay:1.43s}
+ .hero.intro-playing .hero-kicker{animation-delay:1.05s}
+ .hero.intro-playing .hero-description{animation-delay:1.72s}
+ .hero.intro-playing .hero-actions{animation-delay:1.88s}
+ .hero.intro-playing .hero-baseline{animation-delay:1.82s}
+ .hero.intro-playing .clock-widget{animation:hero-widget-open .75s 1.45s both}
+ .motion-enhanced .product-card.motion-pending{opacity:0;transform:translateY(24px)}
+ .motion-enhanced .product-card.motion-in{animation:product-enter .65s cubic-bezier(.2,1,.3,1) backwards;animation-delay:calc(min(var(--motion-order,0),11)*55ms)}
+ .motion-enhanced .shop-intro.motion-pending,.motion-enhanced .about-note.motion-pending{opacity:0;transform:translateY(24px)}
+ .motion-enhanced .shop-intro.motion-in,.motion-enhanced .about-note.motion-in{animation:section-enter .8s cubic-bezier(.2,1,.3,1) backwards}
+ .motion-enhanced .ways article.motion-in{animation:section-enter .7s cubic-bezier(.2,1,.3,1) backwards;animation-delay:calc(var(--motion-order,0)*90ms)}
+ .product-card .product-image img{transition:transform .75s cubic-bezier(.2,1,.3,1),opacity .4s}
+ .product-card:hover .product-image>img:first-child{transform:scale(1.045)}
+ @keyframes hero-color-open{from{opacity:.25;clip-path:inset(0 0 100% 0)}to{opacity:1;clip-path:inset(0)}}
+ @keyframes hero-entry-end{0%,96%{visibility:visible}100%{visibility:hidden}}
+ @keyframes site-backdrop-clear{from{background-color:#101e49}to{background-color:transparent}}
+ @keyframes site-header-open{from{opacity:0;transform:translateY(-22px);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
+ @keyframes hero-curtain-left{0%,20%{transform:translateX(0)}100%{transform:translateX(-115%)}}
+ @keyframes hero-curtain-right{0%,20%{transform:translateX(0)}100%{transform:translateX(115%)}}
+ @keyframes hero-mark{0%{opacity:0;transform:translate(-50%,-42%) scale(1.12);filter:blur(14px)}30%,58%{opacity:1;transform:translate(-50%,-50%) scale(1);filter:blur(0)}100%{opacity:0;transform:translate(-50%,-62%) scale(.92);filter:blur(5px)}}
+ @keyframes hero-seam{0%{opacity:0;transform:scaleY(.2)}28%{opacity:.85;transform:scaleY(1)}100%{opacity:0;transform:scaleY(1.3)}}
+ @keyframes hero-copy-open{from{opacity:0;transform:translateY(44px);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
+ @keyframes hero-showcase-open{from{opacity:0;transform:translateY(55px) scale(.92);filter:blur(12px)}to{opacity:1;transform:none;filter:none}}
+ @keyframes hero-widget-open{from{opacity:0;transform:translateY(18px) scale(.92)}to{opacity:1;transform:none}}
+ @keyframes product-enter{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:none}}
+ @keyframes section-enter{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+}
+@media(max-width:600px){.site-entry-mark{font-size:21vw}.site-entry:before,.site-entry:after{width:59%}}
+@media(prefers-reduced-motion:reduce){.hero.intro-playing *{animation-duration:.01ms!important;animation-delay:0ms!important}.motion-enhanced .motion-pending{opacity:1!important;transform:none!important}}

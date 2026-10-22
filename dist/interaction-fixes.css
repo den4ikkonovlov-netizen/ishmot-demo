@@ -1,0 +1,11 @@
+/* Hide the document caret shown by caret-browsing browsers on non-editable copy. */
+:root { caret-color: transparent; }
+input, textarea, [contenteditable="true"] { caret-color: #183b8d; }
+
+/* Keep the search focus clear without the browser's rectangular blue outline. */
+.search input:focus,
+.search input:focus-visible { outline: none; box-shadow: none; }
+.search:focus-within {
+  border-color: #9aa8bd;
+  box-shadow: 0 0 0 2px #d8dfe9;
+}

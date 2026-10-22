@@ -1,0 +1,16 @@
+/* Real 3D scene, with the original Blendkit geometry and a live screen texture. */
+.hero-cinema h1{font-size:clamp(70px,6.5vw,105px);line-height:1.01;letter-spacing:-.06em}
+.hero-cinema h1>span{white-space:nowrap}
+.hero .phone-stage{position:absolute;inset:auto;left:76%;top:61%;width:min(620px,47vw);height:730px;transform:translate(-50%,calc(-50% - 36px));z-index:2;pointer-events:none;perspective:none;aspect-ratio:auto;margin:0;max-width:none}
+.phone-stage canvas{display:block;position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .5s;pointer-events:none}
+.phone-stage .phone-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;clip-path:none;filter:none;transform:none;opacity:1;transition:opacity .45s}
+.phone-stage.scene-ready canvas{opacity:1}.phone-stage.scene-ready .phone-poster{opacity:0}
+.phone-stage.scene-pending .phone-poster{opacity:0}
+.phone-scene-caption{position:absolute;left:0;right:0;bottom:0;text-align:center;color:#bfd0c3;font-size:12px;line-height:1.5;letter-spacing:.015em}
+.hero-wordmark{width:70%;font-size:17.5vw}.hero-story{width:55%;top:390px}
+.hero .phone-aura{left:48%;top:240px;width:690px;height:700px;animation:none;background:radial-gradient(ellipse,#dcefd61b,transparent 65%)}
+@media(min-width:1700px){.hero .phone-stage{height:750px;width:680px;top:61%;left:75%}.hero-cinema h1{font-size:112px}.hero-wordmark{font-size:300px}.hero-story{top:405px}}
+@media(min-width:901px) and (max-width:1200px){.hero-cinema h1{font-size:6.7vw}.hero .phone-stage{left:77%;width:48vw;height:660px;top:62%}.hero-story{top:355px}.hero .hero-description{max-width:400px}}
+@media(min-width:601px) and (max-width:900px){.hero-cinema h1{font-size:6.8vw}.hero-story{top:340px;width:53%}.hero .phone-stage{width:51vw;height:660px;left:77%;top:59%}.phone-scene-caption{font-size:11px;padding:0 30px}.hero-wordmark{width:92%;font-size:23vw}}
+@media(max-width:600px){.hero.hero-cinema{height:1320px;min-height:1320px}.hero-wordmark{width:auto;font-size:23vw;top:140px}.hero-story{top:250px;left:22px;right:22px;width:auto}.hero-cinema h1{font-size:clamp(40px,12.1vw,70px);line-height:1.02}.hero-cinema h1 em{font-size:1.37em}.hero .phone-stage{left:50%;top:844px;width:100%;height:660px;transform:translate(-50%,calc(-50% - 16px))}.hero .phone-aura{left:-20%;top:530px;width:140%;height:660px}.hero .clock-widget{top:auto;bottom:81px;left:22px;right:auto;width:175px;padding:12px 18px}.hero .clock-widget time{font-size:29px}.hero .clock-widget .widget-eyebrow,.hero .clock-widget .widget-status{font-size:12px}.phone-scene-caption{bottom:0;font-size:12px}.hero .hero-actions{gap:15px}.hero .hero-description{font-size:17px}}
+@media(prefers-reduced-motion:reduce){.phone-stage canvas,.phone-stage .phone-poster{transition:none}}

@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@gltf-transform/core": "^4.2.1",
+    "@gltf-transform/extensions": "^4.2.1",
+    "@napi-rs/canvas": "^0.1.80",
+    "draco3dgltf": "^1.5.7",
+    "esbuild": "^0.25.11",
+    "three": "^0.180.0"
+  }
+}
